@@ -1,11 +1,13 @@
 FROM sentinel:5000/jenkins-build-base:latest
 
-## Configuration for Goland development
+## Configuration for Golang development
+## Latest versions at:
+## https://golang.org/dl/
 
 ENV PATH=$PATH:/usr/local/go/bin
 
 RUN \
-    wget https://golang.org/dl/go1.15.linux-amd64.tar.gz && \
+    wget https://golang.org/dl/go1.15.2.linux-amd64.tar.gz && \
     tar -C /usr/local -xzf go1.15.linux-amd64.tar.gz && \
     rm go1.15.linux-amd64.tar.gz
 
